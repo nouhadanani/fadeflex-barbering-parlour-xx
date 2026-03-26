@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – FadeFlex Barbering Parlour</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Barlow+Condensed:wght@300;400;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-logo">
+      <span class src="images/LOGO.jpeg"></span>
+      <span class="logo-text">FadeFlex</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" class="active">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Book Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <!-- Page hero background: replace with a services/tools image -->
+    <img
+      src="images/ogg.jpg"
+      alt="Barber tools and grooming setup"
+      class="page-hero-bg-img"
+    />
+    <div class="page-hero-bg-text">SERVICES</div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow">What We Offer</p>
+      <h1 class="page-hero-title">Our <em>Services</em></h1>
+      <p class="page-hero-sub">Premium cuts, grooming, and styling — all under one roof.</p>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Services</span>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section class="filter-section">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-btn active" data-filter="all">All Services</button>
+      <button class="filter-btn" data-filter="cuts">Cuts</button>
+      <button class="filter-btn" data-filter="beard">Beard</button>
+      <button class="filter-btn" data-filter="shave">Shave</button>
+      <button class="filter-btn" data-filter="specialty">Specialty</button>
+      <button class="filter-btn" data-filter="packages">Packages</button>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section" id="servicesSection">
+    <div class="services-grid" id="servicesGrid">
+
+      <!-- CUTS -->
+      <div class="service-card" data-category="cuts">
+        <!-- Service image: replace with your classic cut photo -->
+        <div class="sc-img-wrap">
+          <img src="images/classic.jpeg" alt="Classic Cut" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">✂</div>
+          <div class="sc-meta">
+            <span class="sc-category">Cuts</span>
+            <span class="sc-duration">⏱ 30–45 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Classic Cut</h3>
+        <p class="sc-desc">Our signature scissors and clipper work for a timeless, clean finish. Ideal for all hair types and lengths.</p>
+        <ul class="sc-features">
+          <li>Consultation included</li>
+          <li>Hot towel neck finish</li>
+          <li>Styling product applied</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 50</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card featured-card" data-category="cuts">
+        <div class="sc-popular-tag">Most Popular</div>
+        <!-- Service image: replace with your skin fade photo -->
+        <div class="sc-img-wrap">
+          <img src="images/skinfade.jpeg" alt="Skin Fade" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">⚡</div>
+          <div class="sc-meta">
+            <span class="sc-category">Cuts</span>
+            <span class="sc-duration">⏱ 45–60 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Skin Fade</h3>
+        <p class="sc-desc">The FadeFlex signature — ultra-smooth gradient fades blended flawlessly from skin to length. Precision at its finest.</p>
+        <ul class="sc-features">
+          <li>Low, mid, or high fade</li>
+          <li>Sharp line-up included</li>
+          <li>Razor finishing</li>
+          <li>Complimentary style</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 80</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="cuts">
+        <!-- Service image: replace with your taper fade photo -->
+        <div class="sc-img-wrap">
+          <img src="images/download (1).jpeg" alt="Taper Fade" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">💈</div>
+          <div class="sc-meta">
+            <span class="sc-category">Cuts</span>
+            <span class="sc-duration">⏱ 30–40 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Taper Fade</h3>
+        <p class="sc-desc">A subtle, clean taper that gradually transitions from longer on top to shorter on the sides and back.</p>
+        <ul class="sc-features">
+          <li>Natural taper blend</li>
+          <li>Clean neck outline</li>
+          <li>Styling finish</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 65</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="cuts">
+        <!-- Service image: replace with your line up/edge up photo -->
+        <div class="sc-img-wrap">
+          <img src="images/lineup.jpeg" alt="Line Up Edge Up" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">〰</div>
+          <div class="sc-meta">
+            <span class="sc-category">Cuts</span>
+            <span class="sc-duration">⏱ 20–30 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Line Up / Edge Up</h3>
+        <p class="sc-desc">Crisp, razor-sharp edges that frame your face and keep your look fresh between full cuts.</p>
+        <ul class="sc-features">
+          <li>Hairline shaping</li>
+          <li>Temple definition</li>
+          <li>Sideburn detailing</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 35</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <!-- BEARD -->
+      <div class="service-card" data-category="beard">
+        <!-- Service image: replace with your beard sculpt photo -->
+        <div class="sc-img-wrap">
+          <img src="images/download.jpeg" alt="Beard Sculpt" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">🧔</div>
+          <div class="sc-meta">
+            <span class="sc-category">Beard</span>
+            <span class="sc-duration">⏱ 30–40 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Beard Sculpt</h3>
+        <p class="sc-desc">Full beard shaping, trimming, and precision lining to give your beard a bold, clean, intentional look.</p>
+        <ul class="sc-features">
+          <li>Shape & define</li>
+          <li>Precision line-up</li>
+          <li>Beard oil treatment</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 40</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="beard">
+        <!-- Service image: replace with your beard treatment photo -->
+        <div class="sc-img-wrap">
+          <img src="images/download (2).jpeg" alt="Beard Treatment" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">✨</div>
+          <div class="sc-meta">
+            <span class="sc-category">Beard</span>
+            <span class="sc-duration">⏱ 45–60 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Beard Treatment</h3>
+        <p class="sc-desc">Deep conditioning beard treatment with premium oils and balms. Soften, hydrate, and tame even the coarsest beard.</p>
+        <ul class="sc-features">
+          <li>Hot oil treatment</li>
+          <li>Deep conditioning mask</li>
+          <li>Brush & style</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 55</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <!-- SHAVE -->
+      <div class="service-card featured-card" data-category="shave">
+        <!-- Service image: replace with your hot towel shave photo -->
+        <div class="sc-img-wrap">
+          <img src="images/Hot Towel Treatment.jpeg" alt="Hot Towel Shave" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">🪒</div>
+          <div class="sc-meta">
+            <span class="sc-category">Shave</span>
+            <span class="sc-duration">⏱ 45–60 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Hot Towel Shave</h3>
+        <p class="sc-desc">A luxury straight-razor shave experience. Pre-shave oil, warm lather, hot towel treatment, and aftershave balm.</p>
+        <ul class="sc-features">
+          <li>Pre-shave skin prep</li>
+          <li>Straight razor shave</li>
+          <li>Hot towel treatment</li>
+          <li>Premium aftershave</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 60</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="shave">
+        <!-- Service image: replace with your head shave photo -->
+        <div class="sc-img-wrap">
+          <img src="images/headshasve.jpeg" alt="Head Shave" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">🌿</div>
+          <div class="sc-meta">
+            <span class="sc-category">Shave</span>
+            <span class="sc-duration">⏱ 30 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Head Shave</h3>
+        <p class="sc-desc">Complete smooth head shave using clippers and razor for a perfectly clean, polished look.</p>
+        <ul class="sc-features">
+          <li>Clipper & razor finish</li>
+          <li>Scalp moisturizer</li>
+          <li>Head massage</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 50</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <!-- SPECIALTY -->
+      <div class="service-card" data-category="specialty">
+        <!-- Service image: replace with your dreadlock retwist photo -->
+        <div class="sc-img-wrap">
+          <img src="images/dread.jpeg" alt="Dreadlock Retwist" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">🌀</div>
+          <div class="sc-meta">
+            <span class="sc-category">Specialty</span>
+            <span class="sc-duration">⏱ 60–90 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Dreadlock Retwist</h3>
+        <p class="sc-desc">Professional loc retwisting and maintenance to keep your dreadlocks tight, clean, and well-defined.</p>
+        <ul class="sc-features">
+          <li>Palm roll or interlocking</li>
+          <li>Scalp treatment</li>
+          <li>Sheen & moisture</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">From GHS 100</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card" data-category="specialty">
+        <!-- Service image: replace with your hair design/art photo -->
+        <div class="sc-img-wrap">
+          <img src="images/download (3).jpeg" alt="Hair Design Art" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">🎨</div>
+          <div class="sc-meta">
+            <span class="sc-category">Specialty</span>
+            <span class="sc-duration">⏱ 30–60 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">Hair Design / Art</h3>
+        <p class="sc-desc">Custom hair designs and patterns carved into your fade. Express yourself with our artistry barbers.</p>
+        <ul class="sc-features">
+          <li>Custom design consult</li>
+          <li>Razor & shear art</li>
+          <li>Finishing spray</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">From GHS 90</span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <!-- PACKAGES -->
+      <div class="service-card package-card" data-category="packages">
+        <!-- Package image: replace with your FadeFlex Special combo photo -->
+        <div class="sc-img-wrap">
+          <img src="images/Green Brown Modern Minimalist Jewelry Store Discount Instagram Post.png" alt="FadeFlex Special Package" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">👑</div>
+          <div class="sc-meta">
+            <span class="sc-category">Package</span>
+            <span class="sc-duration">⏱ 60–75 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">The FadeFlex Special</h3>
+        <p class="sc-desc">The full experience: skin fade + beard sculpt + hot towel finish. The go-to package for the well-groomed man.</p>
+        <ul class="sc-features">
+          <li>Skin Fade</li>
+          <li>Beard Sculpt</li>
+          <li>Hot Towel Finish</li>
+          <li>Aftershave & Style</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 160 <s>GHS 180</s></span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+      <div class="service-card package-card" data-category="packages">
+        <!-- Package image: replace with your Royal Treatment combo photo -->
+        <div class="sc-img-wrap">
+          <img src="images/Green Brown Modern Minimalist Jewelry Store Discount Instagram Post.png" alt="Royal Treatment Package" class="sc-img" />
+        </div>
+        <div class="sc-header">
+          <div class="sc-icon">💎</div>
+          <div class="sc-meta">
+            <span class="sc-category">Package</span>
+            <span class="sc-duration">⏱ 90–120 min</span>
+          </div>
+        </div>
+        <h3 class="sc-title">The Royal Treatment</h3>
+        <p class="sc-desc">Top-tier grooming experience: classic cut + beard treatment + hot towel shave + scalp massage. Pure indulgence.</p>
+        <ul class="sc-features">
+          <li>Classic Cut</li>
+          <li>Full Beard Treatment</li>
+          <li>Luxury Hot Towel Shave</li>
+          <li>Scalp Massage</li>
+          <li>Premium Products</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">GHS 200 <s>GHS 230</s></span>
+          <a href="index.html#contact" class="btn-book">Book</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICE TABLE -->
+  <section class="price-table-section">
+    <div class="price-table-inner">
+      <p class="section-eyebrow" style="text-align:center;">Pricing Overview</p>
+      <h2 class="section-title" style="text-align:center;">Quick <em>Price Guide</em></h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Duration</th>
+            <th>Price (GHS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Classic Cut</td><td>30–45 min</td><td>50</td></tr>
+          <tr class="highlight-row"><td>Skin Fade ⭐</td><td>45–60 min</td><td>50</td></tr>
+          <tr><td>Taper Fade</td><td>30–40 min</td><td>50</td></tr>
+          <tr><td>Line Up / Edge Up</td><td>20–30 min</td><td>30</td></tr>
+          <tr><td>Beard Sculpt</td><td>30–40 min</td><td>40</td></tr>
+          <tr><td>Beard Treatment</td><td>45–60 min</td><td>55</td></tr>
+          <tr><td>Hot Towel Shave</td><td>45–60 min</td><td>50</td></tr>
+          <tr><td>Head Shave</td><td>30 min</td><td>50</td></tr>
+          <tr><td>Dreadlock Retwist</td><td>60–90 min</td><td>From 100</td></tr>
+          <tr><td>Hair Design / Art</td><td>30–60 min</td><td>From 90</td></tr>
+          <tr class="highlight-row"><td>FadeFlex Special 👑</td><td>60–75 min</td><td>160</td></tr>
+          <tr class="highlight-row"><td>Royal Treatment 💎</td><td>90–120 min</td><td>200</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-inner">
+      <p class="section-eyebrow">Ready to Get Fresh?</p>
+      <h2 class="cta-title">Book Your <em>Appointment</em> Today</h2>
+      <p>Walk-ins welcome. Appointments recommended for packages.</p>
+      <a href="index.html#contact" class="btn-primary">Book Now ✦</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>fade-barbering-parlour</h3>
+                    <p>Bringing the authentic fresh and sharp look to Ghanaians flezxing thier fades.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61583445790083"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/fadeflex_studio?igsh=eXB1OGpwcmFncWE4&utm_source=qr"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://x.com/fadeflex22"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://whatsapp.com/dl/"><i class="fa-brands fa-square-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@niacosmestics?_r=1&_t=ZS-94PL7qisFOb"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+               
+                <div class="footer-section">
+                <div class="location-content">
+                <div class="address">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dansoman ,Zabarma line wowoti road</p>
+                    <p><i class="fas fa-phone"></i> 0262743812,0599059264</p>
+                    <p><i class="fas fa-envelope"></i> Email: <a style="color: beige;" href="mailto:enyomens@yahoo.com">info@fadeflex.com</a></p>
+                  </div>
+                    </div>
+                </div>
+               
+                <div class="footer-section">
+                <div class="hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Saturday: 9am - 9pm</p>
+                    <p>Sunday: 12am - 9pm</p>
+           
+         <hr class="footer-line" >
+            <div class="year">
+                <p class="copy">&copy; <span id="year"></span> fade-barbering-parlour. All Rights Reserved. Powered by <a style="color: beige;" href="mailto:CapstoneTechnologiesGh@proton.me">fadeflexGh</a></p>
+            </div>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

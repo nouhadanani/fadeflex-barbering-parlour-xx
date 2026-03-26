@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FadeFlex Barbering Parlour</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Barlow+Condensed:wght@300;400;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║           FADEFLEX — IMAGE PLACEMENT GUIDE                      ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  Create an /images/ folder next to your HTML files and add:    ║
+  ║                                                                  ║
+  ║  INDEX PAGE (index.html)                                         ║
+  ║  ─────────────────────────────────────────────────────────────  ║
+  ║  images/hero-bg.jpg          → Hero full-screen background       ║
+  ║                                (barbershop interior or barber    ║
+  ║                                 at work — landscape, 1920×1080) ║
+  ║                                                                  ║
+  ║  images/about-barber.jpg     → About section portrait            ║
+  ║                                (barber posing or cutting hair —  ║
+  ║                                 portrait, 800×1000)              ║
+  ║                                                                  ║
+  ║  images/gallery-skinfade.jpg → Gallery: Skin Fade result         ║
+  ║  images/gallery-beard.jpg    → Gallery: Beard Sculpt result      ║
+  ║  images/gallery-classiccut.jpg → Gallery: Classic Cut result     ║
+  ║  images/gallery-lineup.jpg   → Gallery: Line Up result           ║
+  ║  images/gallery-taperfade.jpg → Gallery: Taper Fade result       ║
+  ║                                (all gallery images: square or    ║
+  ║                                 portrait, min 600×600)           ║
+  ║                                                                  ║
+  ║  images/client-kwame.jpg     → Testimonial avatar: Kwame Osei   ║
+  ║  images/client-emmanuel.jpg  → Testimonial avatar: Emmanuel Adu ║
+  ║  images/client-jonas.jpg     → Testimonial avatar: Jonas Asante ║
+  ║                                (avatars: square, min 100×100)    ║
+  ║                                                                  ║
+  ║  SERVICES PAGE (product.html)                                    ║
+  ║  ─────────────────────────────────────────────────────────────  ║
+  ║  images/services-hero-bg.jpg      → Services page background     ║
+  ║  images/service-classiccut.jpg    → Classic Cut card image       ║
+  ║  images/service-skinfade.jpg      → Skin Fade card image         ║
+  ║  images/service-taperfade.jpg     → Taper Fade card image        ║
+  ║  images/service-lineup.jpg        → Line Up card image           ║
+  ║  images/service-beardsculpt.jpg   → Beard Sculpt card image      ║
+  ║  images/service-beardtreatment.jpg → Beard Treatment card image  ║
+  ║  images/service-hottowel.jpg      → Hot Towel Shave card image   ║
+  ║  images/service-headshave.jpg     → Head Shave card image        ║
+  ║  images/service-dreadlocks.jpg    → Dreadlock Retwist card image ║
+  ║  images/service-hairdesign.jpg    → Hair Design card image       ║
+  ║  images/package-fadeflex-special.jpg → FadeFlex Special package  ║
+  ║  images/package-royal-treatment.jpg  → Royal Treatment package   ║
+  ║                                (service cards: landscape 800×500)║
+  ║                                                                  ║
+  ║  NOTE: All images fall back gracefully if missing — the site    ║
+  ║  still looks great without them while you source your photos.   ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">FadeFlex</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="product.html">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <!-- Hero background image: replace with your own barbershop interior/action shot -->
+    <img
+      src="images/ogg.jpg"
+      alt="FadeFlex barber shop interior"
+      class="hero-bg-img"
+    />
+    <div class="hero-bg-text">BARBER</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2020 · Accra, Ghana</p>
+      <h1 class="hero-title">
+        The Art of<br/>
+        <em>The Perfect</em><br/>
+        Fade.
+      </h1>
+      <p class="hero-sub">Where precision meets style. Every cut tells a story.</p>
+      <div class="hero-actions">
+        <a href="product.html" class="btn-primary">Our Services</a>
+        <a href="#about" class="btn-ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-circle">
+        <span>PREMIUM</span>
+        <span>·</span>
+        <span>CUTS</span>
+        <span>·</span>
+        <span>GROOMING</span>
+        <span>·</span>
+      </div>
+      <div class="badge-inner">✦</div>
+    </div>
+    <div class="hero-scroll">scroll down</div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>FRESH CUTS</span><span>✦</span>
+      <span>CLEAN FADES</span><span>✦</span>
+      <span>BEARD SHAPING</span><span>✦</span>
+      <span>HOT TOWEL SHAVES</span><span>✦</span>
+      <span>PREMIUM GROOMING</span><span>✦</span>
+      <span>FRESH CUTS</span><span>✦</span>
+      <span>CLEAN FADES</span><span>✦</span>
+      <span>BEARD SHAPING</span><span>✦</span>
+      <span>HOT TOWEL SHAVES</span><span>✦</span>
+      <span>PREMIUM GROOMING</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-left">
+      <div class="about-img-frame">
+        <!-- About image: replace with your barber/shop photo -->
+        <img
+          src="images/master image.jpeg"
+          alt="FadeFlex master barber at work"
+          class="about-img"
+        />
+        <div class="about-stat-card">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <p class="section-eyebrow">About FadeFlex</p>
+      <h2 class="section-title">More Than a<br/><em>Haircut.</em></h2>
+      <p class="about-text">
+        FadeFlex Barbering Parlour is where craftsmanship meets culture. 
+        We believe every visit should feel like a ritual — a moment to reset, 
+        look sharp, and walk out with confidence dripping.
+      </p>
+      <p class="about-text">
+        Our barbers are trained in the latest techniques while respecting the 
+        timeless classics. From skin fades to dreadlock maintenance, we do it all — precisely.
+      </p>
+      <div class="about-perks">
+        <div class="perk"><span>✦</span> Master Barbers</div>
+        <div class="perk"><span>✦</span> Premium Products</div>
+        <div class="perk"><span>✦</span> Walk-ins Welcome</div>
+        <div class="perk"><span>✦</span> Clean Environment</div>
+      </div>
+      <a href="product.html" class="btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- FEATURED SERVICES -->
+  <section class="featured-services" id="services">
+    <div class="fs-header">
+      <p class="section-eyebrow">What We Do</p>
+      <h2 class="section-title">Signature <em>Services</em></h2>
+    </div>
+    <div class="fs-grid">
+      <div class="fs-card" data-delay="0">
+        <div class="fs-icon">✂</div>
+        <h3>Classic Cut</h3>
+        <p>Timeless scissors and clipper work for a clean, refined finish.</p>
+        <span class="fs-price">From GHS 50</span>
+      </div>
+      <div class="fs-card featured" data-delay="100">
+        <div class="fs-badge-tag">Popular</div>
+        <div class="fs-icon">⚡</div>
+        <h3>Skin Fade</h3>
+        <p>Ultra-smooth gradients blended to perfection. The FadeFlex signature.</p>
+        <span class="fs-price">From GHS 50</span>
+      </div>
+      <div class="fs-card" data-delay="200">
+        <div class="fs-icon">🪒</div>
+        <h3>Hot Towel Shave</h3>
+        <p>Classic straight-razor shave with warm towel luxury treatment.</p>
+        <span class="fs-price">From GHS 50</span>
+      </div>
+      <div class="fs-card" data-delay="300">
+        <div class="fs-icon">🧔</div>
+        <h3>Beard Sculpt</h3>
+        <p>Precision beard shaping, lining, and conditioning for a bold look.</p>
+        <span class="fs-price">From GHS 40</span>
+      </div>
+    </div>
+    <div class="fs-cta">
+      <a href="product.html" class="btn-primary">View All Services →</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <p class="section-eyebrow">The Work</p>
+      <h2 class="section-title">Fresh <em>Gallery</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <!-- Gallery images: replace src with your own work photos -->
+      <div class="g-item g1">
+        <img src="images/skinfade.jpeg" alt="Skin Fade haircut" class="g-img" />
+        <div class="g-overlay"><span>Skin Fade</span></div>
+      </div>
+      <div class="g-item g2">
+        <img src="images/download.jpeg" alt="Beard Sculpt" class="g-img" />
+        <div class="g-overlay"><span>Beard Sculpt</span></div>
+      </div>
+      <div class="g-item g3">
+        <img src="images/classic.jpeg" alt="Classic Cut" class="g-img" />
+        <div class="g-overlay"><span>Classic Cut</span></div>
+      </div>
+      <div class="g-item g4">
+        <img src="images/lineup.jpeg" alt="Line Up" class="g-img" />
+        <div class="g-overlay"><span>Line Up</span></div>
+      </div>
+      <div class="g-item g5">
+        <img src="images/download (1).jpeg" alt="Taper Fade" class="g-img" />
+        <div class="g-overlay"><span>Taper Fade</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <p class="section-eyebrow">Client Love</p>
+    <h2 class="section-title">What They <em>Say</em></h2>
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card">
+        <p class="testi-quote">"FadeFlex is on another level. My fade is always sharp and the vibes in the shop are immaculate. Won't go anywhere else."</p>
+        <div class="testi-author">
+          <!-- Client photo: replace with real client photo or keep initials fallback -->
+          <div class="testi-avatar">
+            <img src="images/ti.jpeg" alt="Kwame Osei" class="avatar-img" onerror="this.style.display='none';this.parentElement.dataset.initials='KO'" />
+            <span class="avatar-initials">KO</span>
+          </div>
+          <div>
+            <strong>Kwame Osei</strong>
+            <span>Loyal Client</span>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Best beard sculpt I've ever had. The barbers really understand what you want and deliver beyond expectations."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="images/t3PM.jpeg" alt="Emmanuel Adu" class="avatar-img" onerror="this.style.display='none'" />
+            <span class="avatar-initials">EA</span>
+          </div>
+          <div>
+            <strong>Emmanuel Adu</strong>
+            <span>Regular Client</span>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"First time here and I was blown away. The hot towel shave experience alone is worth every pesewa. Pure luxury."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="images/t2.jpeg" alt="Jonas Asante" class="avatar-img" onerror="this.style.display='none'" />
+            <span class="avatar-initials">JA</span>
+          </div>
+          <div>
+            <strong>Jonas Asante</strong>
+            <span>New Client</span>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+    <div class="testi-dots" id="testiDots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-left">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">Book Your <em>Session</em></h2>
+      <div class="contact-info">
+        <div class="ci-item">
+          <span class="ci-icon">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p>Dansoman Wowoti Street, Accra, Ghana</p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <span class="ci-icon">📞</span>
+          <div>
+            <strong>Phone</strong>
+            <p>0599059264/0262743812</p>
+          </div>
+        </div>
+        <div class="ci-item">
+          <span class="ci-icon">🕐</span>
+          <div>
+            <strong>Hours</strong>
+            <p>Mon–Sat: 9am – 9pm<br/>Sunday: 12pm – 9pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+233 ..." />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service</label>
+          <select>
+            <option value="">Select a service</option>
+            <option>Classic Cut</option>
+            <option>Skin Fade</option>
+            <option>Hot Towel Shave</option>
+            <option>Beard Sculpt</option>
+            <option>Dreadlock Maintenance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" />
+        </div>
+        <div class="form-group">
+          <label>Message (optional)</label>
+          <textarea placeholder="Any special requests..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width">Book Appointment ✦</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>fade-barbering-parlour</h3>
+                    <p>Bringing the authentic fresh and sharp look to Ghanaians flezxing thier fades.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61583445790083"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/fadeflex_studio?igsh=eXB1OGpwcmFncWE4&utm_source=qr"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://x.com/fadeflex22"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://whatsapp.com/dl/"><i class="fa-brands fa-square-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.tiktok.com/@niacosmestics?_r=1&_t=ZS-94PL7qisFOb"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+               
+                <div class="footer-section">
+                <div class="location-content">
+                <div class="address">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dansoman ,Zabarma line wowoti road</p>
+                    <p><i class="fas fa-phone"></i> 0262743812,0599059264</p>
+                    <p><i class="fas fa-envelope"></i> Email: <a style="color: beige;" href="mailto:enyomens@yahoo.com">info@fadeflex.com</a></p>
+                  </div>
+                    </div>
+                </div>
+               
+                <div class="footer-section">
+                <div class="hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Saturday: 9am - 9pm</p>
+                    <p>Sunday: 12am - 9pm</p>
+           
+         <hr class="footer-line" >
+            <div class="year">
+                <p class="copy">&copy; <span id="year"></span> fade-barbering-parlour. All Rights Reserved. Powered by <a style="color: beige;" href="mailto:CapstoneTechnologiesGh@proton.me">fadeflexGh</a></p>
+            </div>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  
