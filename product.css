@@ -1,0 +1,438 @@
+/* ===========================
+   FADEFLEX BARBERING PARLOUR
+   product.css — Services Page
+   =========================== */
+
+/* ---- Page Hero ---- */
+.page-hero {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 4% 4rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark-2);
+}
+/* Page hero background image — replace src="images/services-hero-bg.jpg" */
+.page-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.18;
+  filter: grayscale(50%) contrast(1.1);
+  z-index: 0;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(17,17,17,0.7) 0%, rgba(17,17,17,0.85) 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 79px,
+      rgba(201,168,76,0.025) 80px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+.page-hero-bg-text { z-index: 2; }
+.page-hero-content { z-index: 2; }
+.breadcrumb { z-index: 2; }
+.page-hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 14rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201,168,76,0.06);
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s ease both;
+}
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+}
+.page-hero-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+.page-hero-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.breadcrumb {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  z-index: 2;
+}
+.breadcrumb a { color: var(--gold); transition: opacity 0.2s; }
+.breadcrumb a:hover { opacity: 0.8; }
+.breadcrumb span { color: var(--text-muted); }
+
+/* ---- Filter Section ---- */
+.filter-section {
+  background: var(--dark);
+  padding: 2rem 4%;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  position: sticky;
+  top: 60px;
+  z-index: 50;
+}
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.filter-tabs::-webkit-scrollbar { display: none; }
+.filter-btn {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--cream);
+}
+.filter-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--dark);
+}
+
+/* ---- Services Grid ---- */
+.services-section {
+  padding: 5rem 4%;
+  background: var(--dark);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ---- Service Card Image ---- */
+/* Each card image: replace src="images/service-*.jpg" with your actual service photos */
+.sc-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 0.25rem;
+  background: var(--dark-4);
+  position: relative;
+  flex-shrink: 0;
+}
+.sc-img-wrap::after {
+  /* Subtle gold shimmer at bottom to blend into card */
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to top, var(--dark-3), transparent);
+  pointer-events: none;
+}
+.featured-card .sc-img-wrap::after {
+  background: linear-gradient(to top, rgba(10,10,10,0.95), transparent);
+}
+/* Service image */
+.sc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(15%) brightness(0.8) contrast(1.05);
+  transition: filter 0.4s ease, transform 0.5s ease;
+}
+.service-card:hover .sc-img {
+  filter: grayscale(0%) brightness(0.95) contrast(1.05);
+  transform: scale(1.06);
+}
+
+/* ---- Service Card ---- */
+.service-card {
+  background: var(--dark-3);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(25px);
+}
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(201,168,76,0.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+.featured-card {
+  background: linear-gradient(160deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+  border-color: rgba(201,168,76,0.35);
+}
+.package-card {
+  background: linear-gradient(160deg, rgba(201,168,76,0.08), var(--dark-3));
+  border-color: rgba(201,168,76,0.25);
+}
+.sc-popular-tag {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2px;
+}
+.sc-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sc-icon { font-size: 2rem; line-height: 1; }
+.sc-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+.sc-category {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.sc-duration {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.sc-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.2;
+}
+.sc-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.sc-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+.sc-features li {
+  font-size: 0.85rem;
+  color: var(--text);
+  padding-left: 1.25rem;
+  position: relative;
+}
+.sc-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+.sc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+.sc-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.sc-price s {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+.btn-book {
+  display: inline-block;
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  transition: all 0.25s ease;
+}
+.btn-book:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* ---- Price Table ---- */
+.price-table-section {
+  padding: 6rem 4%;
+  background: var(--dark-2);
+}
+.price-table-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2.5rem;
+  font-size: 0.92rem;
+}
+.price-table thead tr {
+  background: rgba(201,168,76,0.12);
+}
+.price-table thead th {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+.price-table tbody tr {
+  border-bottom: 1px solid rgba(245,240,232,0.05);
+  transition: background 0.2s;
+}
+.price-table tbody tr:hover {
+  background: rgba(201,168,76,0.04);
+}
+.price-table tbody td {
+  padding: 0.9rem 1.25rem;
+  color: var(--text-muted);
+}
+.price-table tbody td:first-child {
+  color: var(--text);
+  font-weight: 400;
+}
+.price-table tbody td:last-child {
+  color: var(--cream);
+  font-family: var(--font-condensed);
+  font-weight: 600;
+}
+.price-table .highlight-row td {
+  background: rgba(201,168,76,0.06);
+  color: var(--text);
+}
+.price-table .highlight-row td:last-child {
+  color: var(--gold);
+}
+
+/* ---- CTA Banner ---- */
+.cta-banner {
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(201,168,76,0.12), transparent 70%),
+    var(--dark-3);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  padding: 6rem 4%;
+  text-align: center;
+}
+.cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.cta-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+.cta-inner p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* ---- Hidden service cards ---- */
+.service-card.hidden {
+  display: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .page-hero { min-height: 35vh; }
+  .filter-section { top: 56px; }
+  .price-table { font-size: 0.82rem; }
+  .price-table thead th,
+  .price-table tbody td { padding: 0.75rem; }
+}
